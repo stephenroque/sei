@@ -416,7 +416,6 @@ function isRGBValid (color) {
     .replace(/^rgb\(|\)| /, '')
     .split(',')
     .map((x) => parseInt(x))
-  console.log(r, g, b)
   if (r >= 0 && r <= 255 && g >= 0 && g <= 255 && b >= 0 && b <= 255) {
     return true
   } else {

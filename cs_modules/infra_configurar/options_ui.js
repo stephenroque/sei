@@ -125,15 +125,12 @@ function optionsUi (BaseName) {
       $('#divConfigPontoControleCores').toggle('fast')
     })
     if (SavedOptions.CheckTypes.includes('ponto_controle_cores')) {
-      console.log('pontoControleCores', SavedOptions.pontoControleCores)
       SavedOptions.pontoControleCores.forEach(e => {
         addRowPontoControleCores(e.nome, e.cor, e.filter)
       })
     }
     document.getElementById('rowPontoControleCoresTemplate').style.display = 'none'
-    console.log(document.querySelector('#adicionarPontoControleCores'))
     document.querySelector('#adicionarPontoControleCores').addEventListener('click', function () {
-      console.log('click')
       addRowPontoControleCores('', '#0000FF', colorToFilter('#0000FF'))
     })
 
