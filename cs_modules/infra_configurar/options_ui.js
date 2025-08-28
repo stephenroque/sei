@@ -269,11 +269,8 @@ function optionsUi (BaseName) {
       baseUrl,
       pontoControleCores
     }
-    if (isChrome) {
-      currentBrowser.storage.local.set(OptionsToSave)
-    } else {
-      currentBrowser.storage.local.set(OptionsToSave).then(setItem, onError)
-    }
+
+    currentBrowser.storage.local.set(OptionsToSave).then(setItem, onError)
 
     /** Notificar background page que as opções foram salvas */
     currentBrowser.runtime.sendMessage({

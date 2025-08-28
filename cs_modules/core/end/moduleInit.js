@@ -1,5 +1,5 @@
 /* eslint-disable no-global-assign */
-/* global seiVersionCompare, CompName, SavedOptions, deepMerge */
+/* global seiVersionCompare, CompName, SavedOptions */
 
 // eslint-disable-next-line no-unused-vars
 async function ModuleInit (BaseName, PageReload = false) {
@@ -31,7 +31,7 @@ async function ModuleInit (BaseName, PageReload = false) {
 }
 
 async function loadDefaultOptions (storageData) {
-  SavedOptions = deepMerge(SavedOptions, storageData)
+  SavedOptions = { ...SavedOptions, ...storageData }
   return SavedOptions
 }
 

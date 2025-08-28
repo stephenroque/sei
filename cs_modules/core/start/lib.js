@@ -64,19 +64,6 @@ __mconsole.prototype.error = function (message) {
   console.error('[' + CompName + ' ' + Date.now() + ']    ERRO: ' + this.PModuleName + ': ' + message)
 }
 
-/* adicionar função de log no contexto da página */
-execOnPage(`
-
-  function __mconsole(ModuleName) {
-    this.PModuleName = ModuleName;
-    console.log("[${CompName} " + Date.now() + "]  " + this.PModuleName + ": Loading...");
-  }
-  __mconsole.prototype.log = function(message) {
-      console.log("[${CompName} " + Date.now() + "]    "+ this.PModuleName+": " + message);
-  }
-
-`)
-
 function Init (BaseName) {
   console.log('[' + CompName + ' ' + Date.now() + ']' + BaseName)
 }
