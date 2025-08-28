@@ -10,7 +10,7 @@ const ModNameIdle = 'core.d_idle'
 ModuleInit(ModNameIdle).then((options) => {
   AdicionarIdentificadorSeipp(ModNameIdle)
 
-  ocultarMenuAutomaticamente()
+  ocultarMenuAutomaticamente(ModNameIdle)
 
   options.CheckTypes.forEach(function (element) {
     switch (element) {
